@@ -1,0 +1,197 @@
+{
+  "gameId": "ner_memory_quiz",
+  "items": [
+    {
+      "locale": "as",
+      "state": "Assam",
+      "category": "food",
+      "difficulty": 1,
+      "question": "What is this dish called?",
+      "options": [
+        "Dhokla",
+        "Idli",
+        "Vada",
+        "Khar"
+      ],
+      "correctOption": 3,
+      "imageUrl": "khar",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "as",
+      "state": "Assam",
+      "category": "festivals",
+      "difficulty": 2,
+      "question": "This harvest festival is celebrated with dance and feasting every spring. What is it called?",
+      "options": [
+        "Baisakhi",
+        "Pongal",
+        "Bihu",
+        "Onam"
+      ],
+      "correctOption": 2,
+      "imageUrl": "bihu",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "as",
+      "state": "Assam",
+      "category": "places",
+      "difficulty": 1,
+      "question": "Which famous national park, known for the one-horned rhinoceros, is this?",
+      "options": [
+        "Gir Forest",
+        "Sundarbans",
+        "Jim Corbett",
+        "Kaziranga National Park"
+      ],
+      "correctOption": 3,
+      "imageUrl": "kaziranga",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "as",
+      "state": "Assam",
+      "category": "objects",
+      "difficulty": 1,
+      "question": "What is this handwoven cloth, often given as a mark of respect, called?",
+      "options": [
+        "Dupatta",
+        "Pashmina",
+        "Gamosa",
+        "Angavastram"
+      ],
+      "correctOption": 2,
+      "imageUrl": "gamosa",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "kha",
+      "state": "Meghalaya",
+      "category": "places",
+      "difficulty": 2,
+      "question": "This bridge is grown from the roots of living trees over many years. Where would you find it?",
+      "options": [
+        "Kerala",
+        "Himachal Pradesh",
+        "Goa",
+        "Meghalaya"
+      ],
+      "correctOption": 3,
+      "imageUrl": "meghalaya",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "kha",
+      "state": "Meghalaya",
+      "category": "food",
+      "difficulty": 2,
+      "question": "Which of these is a well-known Khasi dish made with rice and pork or offal?",
+      "options": [
+        "Biryani",
+        "Pav Bhaji",
+        "Litti Chokha",
+        "Jadoh"
+      ],
+      "correctOption": 3,
+      "imageUrl": "jadoh",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "nag",
+      "state": "Nagaland",
+      "category": "festivals",
+      "difficulty": 2,
+      "question": "This annual festival brings together all of Nagaland's tribes for music, dance and food. What is it called?",
+      "options": [
+        "Wangala",
+        "Losar",
+        "Hornbill Festival",
+        "Chapchar Kut"
+      ],
+      "correctOption": 2,
+      "imageUrl": "hornbill",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "nag",
+      "state": "Nagaland",
+      "category": "objects",
+      "difficulty": 3,
+      "question": "A woven shawl with tribe-specific patterns, often worn on ceremonial occasions, is common across which state?",
+      "options": [
+        "Punjab",
+        "Gujarat",
+        "Nagaland",
+        "Rajasthan"
+      ],
+      "correctOption": 2,
+      "imageUrl": "nagaland_shawl",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "mni",
+      "state": "Manipur",
+      "category": "places",
+      "difficulty": 1,
+      "question": "Which lake, famous for its floating circular masses of vegetation called phumdis, is this?",
+      "options": [
+        "Loktak Lake",
+        "Chilika Lake",
+        "Dal Lake",
+        "Wular Lake"
+      ],
+      "correctOption": 0,
+      "imageUrl": "loktak",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "mni",
+      "state": "Manipur",
+      "category": "festivals",
+      "difficulty": 3,
+      "question": "A festival of colour and community feasting celebrated in Manipur, similar in spirit to Holi, is called:",
+      "options": [
+        "Rath Yatra",
+        "Ganesh Chaturthi",
+        "Yaosang",
+        "Durga Puja"
+      ],
+      "correctOption": 2,
+      "imageUrl": "yaosang",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "lus",
+      "state": "Mizoram",
+      "category": "festivals",
+      "difficulty": 2,
+      "question": "This spring festival marks the end of jhum (shifting) cultivation's clearing season in Mizoram. What is it called?",
+      "options": [
+        "Losar",
+        "Bihu",
+        "Sangai Festival",
+        "Chapchar Kut"
+      ],
+      "correctOption": 3,
+      "imageUrl": "chapmar_kaut",
+      "reviewStatus": "needs_native_review"
+    },
+    {
+      "locale": "as",
+      "state": "Assam",
+      "category": "objects",
+      "difficulty": 4,
+      "question": "You keep tea leaves fresh in a tin, brew them in a kettle, and serve in small cups after a meal. Which crop is Assam most famous for producing?",
+      "options": [
+        "Sugarcane",
+        "Cotton",
+        "Coffee",
+        "Tea"
+      ],
+      "correctOption": 3,
+      "imageUrl": "tea",
+      "reviewStatus": "needs_native_review"
+    }
+  ]
+}
