@@ -29,7 +29,7 @@ namespace SmritiCare.PatternRecall
 
         [Header("Round settings — plug a real level system into these later")]
         [Tooltip("Grid is gridSize x gridSize.")]
-        [Range(2, 3)]
+        [Range(2, 4)]
         [SerializeField] private int gridSize = 2;
 
         [Tooltip("How many tiles light up this round.")]
@@ -48,6 +48,15 @@ namespace SmritiCare.PatternRecall
         [Header("Pacing")]
         [SerializeField] private float interRoundPause = 1.5f;
         [SerializeField] private float feedbackHoldDuration = 2f;
+
+
+
+        [Header("Level System")]
+        [SerializeField] private int level = 1;
+        [SerializeField] private int roundsPerLevel = 1;
+
+        [SerializeField] private float revealDecreasePerLevel = 0.5f;
+        [SerializeField] private int extraTilesPerLevel = 1;
 
         /// <summary>Fires after each round's feedback is scored, before the next round starts.</summary>
         public event Action<PatternRecallRoundResult> OnRoundComplete;
@@ -130,6 +139,7 @@ namespace SmritiCare.PatternRecall
 
             var result = ScoreRound();
             OnRoundComplete?.Invoke(result);
+            IncreaseLevel();
             Debug.Log($"[PatternRecall] round done — grid {result.gridSize}x{result.gridSize}, " +
                       $"correct {result.correctSelections}, missed {result.missedCells}, " +
                       $"incorrect {result.incorrectSelections}, response {result.responseTimeSeconds:F1}s");
@@ -249,6 +259,18 @@ namespace SmritiCare.PatternRecall
             yield return new WaitForSeconds(feedbackHoldDuration);
             foreach (var tile in _activeTiles)
                 tile.SetState(TileState.Idle);
+        }
+
+        private void IncreaseLevel()
+        {
+            level++;
+
+            gridSize = Mathf.Min(4, 2 + (level - 1) / 2);
+            cellsToHighlight = Mathf.Min(gridSize * gridSize - 1, 1 + (level - 1));
+            revealDuration = Mathf.Max(1f, 3f - (level - 1) * revealDecreasePerLevel);
+
+            Debug.Log($"[PatternRecall] Level {level} — Grid: {gridSize}x{gridSize}, " +
+                      $"Tiles: {cellsToHighlight}, Reveal: {revealDuration:F1}s");
         }
     }
 }

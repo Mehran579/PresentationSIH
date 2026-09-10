@@ -10,7 +10,11 @@ public class PrakritiSpotter : MonoBehaviour
 
     void Start()
     {
-        foreach (var m in moles) m.SetActive(false);
+        foreach (var m in moles)
+        {
+            m.SetActive(false);
+        }
+
         StartCoroutine(SpawnLoop());
     }
 
@@ -21,6 +25,7 @@ public class PrakritiSpotter : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(spawnDelay.x, spawnDelay.y));
 
             GameObject mole = moles[Random.Range(0, moles.Count)];
+
             if (!mole.activeSelf)
                 StartCoroutine(ShowMole(mole));
         }
@@ -29,7 +34,14 @@ public class PrakritiSpotter : MonoBehaviour
     IEnumerator ShowMole(GameObject mole)
     {
         mole.SetActive(true);
+
+        Prakriti prakriti = mole.GetComponent<Prakriti>();
+        if (prakriti != null)
+            prakriti.PopIn();
+
         yield return new WaitForSeconds(Random.Range(visibleTime.x, visibleTime.y));
-        mole.SetActive(false); // hides itself if never touched
+
+        if (mole.activeSelf)
+            mole.SetActive(false);
     }
 }

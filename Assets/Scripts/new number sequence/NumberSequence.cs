@@ -1,4 +1,5 @@
 using PrimeTween;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class NumberSequence : MonoBehaviour
     public Sprite[] level3sprites;
     public Sprite[] level4sprites;
 
+    public Image blankImage;
+
     public int correctAnsIndex;
 
     [Header("Answer Options")]
@@ -26,6 +29,7 @@ public class NumberSequence : MonoBehaviour
     public Sprite[] level3ansSprite;
     public Sprite[] level4ansSprite;
 
+    public Sprite questionMarkSprite;
 
     private void OnEnable()
     {
@@ -34,6 +38,7 @@ public class NumberSequence : MonoBehaviour
 
     void LoadLevel(int level)
     {
+        blankImage.sprite = questionMarkSprite;
         switch (level)
         {
             case 1:
@@ -110,8 +115,8 @@ public class NumberSequence : MonoBehaviour
         if (buttonIndex == correctAnsIndex)
         {
             Debug.Log("Correct Answer!");
-            level++;
-            LoadLevel(level);
+            blankImage.sprite = ansImages[correctAnsIndex].sprite;
+            StartCoroutine(NextLevel());
         }
         else
         {
@@ -124,5 +129,11 @@ public class NumberSequence : MonoBehaviour
                 10
             );
         }
+    }
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(0.5f);
+        level++;
+        LoadLevel(level);
     }
 }

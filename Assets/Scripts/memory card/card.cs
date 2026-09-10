@@ -12,6 +12,7 @@ public class card : MonoBehaviour
 
     public bool isSelected;
 
+    //public MemoryCard memoryCard;
     public MemoryCard memoryCard;
 
     public void OnCardClick()
